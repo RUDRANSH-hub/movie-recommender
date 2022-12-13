@@ -42,8 +42,8 @@ gauth = GoogleAuth()
 gauth.credentials = GoogleCredentials.get_application_default()
 drive = GoogleDrive(gauth)
 
-link1 = "https://drive.google.com/file/d/1MOYgqBQZ_dnmydOA9bQF65X4h64k4Mhi/view?usp=share_link"
-link2 = "https://drive.google.com/file/d/1HWi2agYVFsjrUITMzPTYWDMo66Llte5F/view?usp=share_link"
+link1 = "#drive link of credits.csv"
+link2 = "#drive link of movie.csv"
 
 id1 = link1.split("/")[-2]
 id2 = link2.split("/")[-2]
