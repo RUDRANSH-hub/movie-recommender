@@ -10,8 +10,7 @@
 3. Streamlit
 
 ## Dataset
-TMDB 5000 Movie Dataset --->https://drive.google.com/drive/folders/1fGhIqRQ1PsxDcBGDuhQNvGqrMmUSn-RI?usp=sharing
-
+TMDB 5000 Movie Dataset ---> https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
 ## Similarty and movie pickle file 
 
-https://drive.google.com/drive/folders/1YB1YzHTzV2K2CuVdsWF-KqG2H6V2-jqL?usp=sharing
+https://drive.google.com/drive/folders/1wpEnGR6w1AknCx_kXAozv7ZNg3ApmZ5R
