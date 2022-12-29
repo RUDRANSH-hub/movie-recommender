@@ -2,7 +2,31 @@ import pandas as pd
 import pickle
 import requests
 import streamlit as st
+pip install -U -q PyDrive
 
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
+from google.colab import auth
+from oauth2client.client import GoogleCredentials
+ 
+ 
+# Authenticate and create the PyDrive client.
+auth.authenticate_user()
+gauth = GoogleAuth()
+gauth.credentials = GoogleCredentials.get_application_default()
+drive = GoogleDrive(gauth)
+
+link1 = "https://drive.google.com/file/d/1gtRsSn0oly004t9wlE6t799Uq9DBtaG6/view?usp=share_link"
+link2 = "https://drive.google.com/file/d/1FkLzm5cFeX1n-kEbH6w98HEy6SsdMaF2/view?usp=share_link"
+
+id1 = link1.split("/")[-2]
+id2 = link2.split("/")[-2]
+
+downloaded1 = drive.CreateFile({'id':id1})
+downloaded1.GetContentFile('movie_dict.pkl') 
+
+downloaded2 = drive.CreateFile({'id':id2})
+downloaded2.GetContentFile('similarity.pkl')
 
 # fetch posters
 def fetch_details(movie_id):
@@ -21,8 +45,8 @@ def fetch_details(movie_id):
 
 
 # load pickle files
-movies_dict = pickle.load(open("https://drive.google.com/file/d/1gtRsSn0oly004t9wlE6t799Uq9DBtaG6/view?usp=share_link", "rb"))
-similarity = pickle.load(open("https://drive.google.com/file/d/1FkLzm5cFeX1n-kEbH6w98HEy6SsdMaF2/view?usp=share_link", "rb"))
+movies_dict = pickle.load(open("movie_dict.pkl", "rb"))
+similarity = pickle.load(open("similarity.pkl", "rb"))
 
 
 # store the name of all movies in one place for select box
