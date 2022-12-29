@@ -21,8 +21,8 @@ def fetch_details(movie_id):
 
 
 # load pickle files
-movies_dict = pickle.load(open("movies_dict.pkl", "rb"))
-similarity = pickle.load(open("similarity.pkl", "rb"))
+movies_dict = pickle.load(open("https://drive.google.com/file/d/1gtRsSn0oly004t9wlE6t799Uq9DBtaG6/view?usp=share_link", "rb"))
+similarity = pickle.load(open("https://drive.google.com/file/d/1FkLzm5cFeX1n-kEbH6w98HEy6SsdMaF2/view?usp=share_link", "rb"))
 
 
 # store the name of all movies in one place for select box
