@@ -2,7 +2,7 @@ import pandas as pd
 import pickle
 import requests
 import streamlit as st
-pip install -U -q PyDrive
+
 
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
